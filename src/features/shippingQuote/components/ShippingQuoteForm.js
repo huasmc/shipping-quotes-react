@@ -1,16 +1,28 @@
 import { memo, useState } from "react";
+import { useDispatch } from "react-redux";
 import Button from "../../../common/components/Button";
 import Dropdown from "../../../common/components/Dropdown";
 import Input from "../../../common/components/Input";
 import { shippingChannels } from "../../../common/config/shippingChannels";
+import { createQuote } from "../ShippingQuoteSlice";
 
-const ShippingQuoteForm = () => {
+const ShippingQuotesForm = () => {
 	const [originCountry, setOriginCountry] = useState("");
 	const [destinationCountry, setDestinationCountry] = useState("");
 	const [quotePrice, setQuotePrice] = useState("");
 	const [shippingChannel, setShippingChannel] = useState(shippingChannels[0]);
+	const dispatch = useDispatch();
 
-	const onCreateQuote = () => {};
+	const onCreateQuote = () => {
+		dispatch(
+			createQuote({
+				originCountry,
+				destinationCountry,
+				quotePrice,
+				shippingChannel,
+			})
+		);
+	};
 
 	const isFormValid = () => {
 		return originCountry && destinationCountry && quotePrice && shippingChannel;
@@ -53,4 +65,4 @@ const ShippingQuoteForm = () => {
 	);
 };
 
-export default memo(ShippingQuoteForm);
+export default memo(ShippingQuotesForm);
