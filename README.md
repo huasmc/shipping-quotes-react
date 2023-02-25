@@ -2,6 +2,8 @@
 
 React built UI that calculates the estimated time for shipping services with the selected quote using client's input.
 
+The site is deployed [here](https://resonant-zuccutto-3a6846.netlify.app/).
+
 ## Requirements
 
 - User input
@@ -23,6 +25,7 @@ React built UI that calculates the estimated time for shipping services with the
 
 
 ![image](https://i.ibb.co/GpDCtjb/Untitled.png)
+![mobile-image](https://i.ibb.co/KrpgNyd/Untitled.png)
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
