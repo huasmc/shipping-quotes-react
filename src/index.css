@@ -25,3 +25,14 @@ li {
 .input-field {
 	margin-bottom: 10px;
 }
+
+.app-button {
+	margin: 10px 0 10px 0;
+	width: 100px;
+	padding: 10px;
+	background-color: #3898ec;
+	white-space: nowrap;
+	color: white;
+	border: none;
+	border-radius: 5px;
+}

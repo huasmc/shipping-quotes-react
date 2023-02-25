@@ -1,4 +1,5 @@
 import { memo, useState } from "react";
+import Button from "../../../common/components/Button";
 import Dropdown from "../../../common/components/Dropdown";
 import Input from "../../../common/components/Input";
 import { shippingChannels } from "../../../common/config/shippingChannels";
@@ -8,6 +9,12 @@ const ShippingQuoteForm = () => {
 	const [destinationCountry, setDestinationCountry] = useState("");
 	const [quotePrice, setQuotePrice] = useState("");
 	const [shippingChannel, setShippingChannel] = useState(shippingChannels[0]);
+
+	const onCreateQuote = () => {};
+
+	const isFormValid = () => {
+		return originCountry && destinationCountry && quotePrice && shippingChannel;
+	};
 
 	return (
 		<div>
@@ -35,6 +42,13 @@ const ShippingQuoteForm = () => {
 				setValue={setShippingChannel}
 				options={shippingChannels}
 			/>
+			<div style={{ paddingLeft: "20px" }}>
+				<Button
+					label="Create quote"
+					onClick={onCreateQuote}
+					disabled={isFormValid()}
+				></Button>
+			</div>
 		</div>
 	);
 };
