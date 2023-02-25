@@ -1,4 +1,5 @@
 import { memo, useState } from "react";
+import Dropdown from "../../../common/components/Dropdown";
 import Input from "../../../common/components/Input";
 import { shippingChannels } from "../../../common/config/shippingChannels";
 
@@ -27,6 +28,12 @@ const ShippingQuoteForm = () => {
 				value={quotePrice}
 				setValue={setQuotePrice}
 				type="number"
+			/>
+			<Dropdown
+				label="Shipping channel"
+				value={shippingChannel}
+				setValue={setShippingChannel}
+				options={shippingChannels}
 			/>
 		</div>
 	);
