@@ -1,3 +1,28 @@
+## Description
+
+React built UI that calculates the estimated time for shipping services with the selected quote using client's input.
+
+## Requirements
+
+- User input
+- - [x] Starting country
+- - [x] Destination country
+- - [x] Quote cost
+- - [x] Shipping channel
+- Quote
+- - [x] Quote box
+- - [x] Take new user input
+- - [x] Calculate delivery range
+- - - 3 to 7 days for Air + 2/4 days
+- - - 25 to 30 days for Ocean + 5/10 days
+- - - Display expected dates
+- Restrictions
+- - [x] Only raw CSS
+- - [x] Latest version of React
+- [x] Responsive
+
+
+![image](https://i.ibb.co/GpDCtjb/Untitled.png)
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
